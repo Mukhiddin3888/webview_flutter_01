@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_in_flutter_1/menu.dart';
 import 'package:webview_in_flutter_1/webview_controls.dart';
 
 class WebViewPage extends StatefulWidget {
@@ -57,7 +58,7 @@ class _WebViewPageState extends State<WebViewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Mukhiddin"),actions: [NavigationControls(webViewController: widget.webViewController)],),
+      appBar: AppBar(title: Text("Mukhiddin"),actions: [NavigationControls(webViewController: widget.webViewController), Menu(webViewController: widget.webViewController)],),
       body: Stack(
           children:[
         WebViewWidget(controller: widget.webViewController),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_in_flutter_1/menu.dart';
 
 class NavigationControls extends StatelessWidget {
   const NavigationControls({Key? key, required this.webViewController})
@@ -40,10 +41,6 @@ class NavigationControls extends StatelessWidget {
               webViewController.reload();
             },
             icon: const Icon(Icons.replay)),
-        IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.menu),
-        ),
       ],
     );
   }
